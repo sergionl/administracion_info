@@ -1,0 +1,7 @@
+setwd("D:/administracion_info/lab07/clase 2/scripts")
+estudiantes<-read.csv("D:/administracion_info/lab07/clase 2/scripts/data-conversion.csv")
+niveles<-c(-Inf,10000,31000,Inf)
+nom.nivel<-c('bajo','medio','alto')
+estudiantes$Income.cat<-cut(estudiantes$Income,breaks=niveles,labels = nom.nivel)
+str(estudiantes)
+estudiantes$Income.cat2<-cut(estudiantes$Income,breaks = 4, labels = c("Nivel 1","Nivel 2","Nivel 3","Nivel 4"))

@@ -1,0 +1,8 @@
+setwd("D:/administracion_info/lab07/clase 2/scripts")
+estudiantes<-read.csv("D:/administracion_info/lab07/clase 2/scripts/data-conversion.csv")
+library(dummies)
+estudiantes.dummy<-dummy.data.frame(estudiantes, sep=".")
+names(estudiantes.dummy)
+dummy(estudiantes$State, sep=".")
+dummy.data.frame(estudiantes,names = c("State"),sep=".")
+dummy.data.frame(estudiantes,names = c("State","Gender"),sep=".")
